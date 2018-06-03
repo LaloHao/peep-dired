@@ -76,16 +76,16 @@
 (defun peep-dired-next-file ()
   (interactive)
   (dired-next-line 1)
-  (peep-dired-display-file-other-window)
   (when peep-dired-cleanup-eagerly
-    (peep-dired-cleanup)))
+    (peep-dired-cleanup))
+  (peep-dired-display-file-other-window))
 
 (defun peep-dired-prev-file ()
   (interactive)
   (dired-previous-line 1)
-  (peep-dired-display-file-other-window)
   (when peep-dired-cleanup-eagerly
-    (peep-dired-cleanup)))
+    (peep-dired-cleanup))
+  (peep-dired-display-file-other-window))
 
 (defun peep-dired-kill-buffers-without-window ()
   "Will kill all peep buffers that are not displayed in any window"
